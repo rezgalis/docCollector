@@ -7,6 +7,11 @@ const exportBtn = document.getElementById('export-btn');
 const clearBtn = document.getElementById('clear-btn');
 const previewModal = document.getElementById('preview-modal');
 
+document.getElementById('open-options').addEventListener('click', (e) => {
+  e.preventDefault();
+  chrome.runtime.openOptionsPage();
+});
+
 let collection = [];
 let settings = { maxPages: 20, clearAfterExport: true };
 let expandedId = null;
