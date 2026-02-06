@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="sidepanel.css">
+  <title>docCollector</title>
+</head>
+<body>
+  <div class="container">
+    <header class="header">
+      <h1>I <s>hoarde</s> collect to educate AI</h1>
+    </header>
+
+    <button class="add-btn" id="add-page-btn" disabled>
+      + Add Current Page
+    </button>
+
+    <div class="collection-section">
+      <div class="collection-header">
+        <span id="collection-count">Collected (0 of 20):</span>
+      </div>
+      <div class="collection-list" id="collection-list"></div>
+      <div class="empty-state" id="empty-state">
+        No pages collected yet. Browse to a page and click "Add Current Page".
+      </div>
+      <div class="limit-message" id="limit-message" hidden>
+        Collection full. Export to continue collecting.
+      </div>
+    </div>
+
+    <div class="export-section">
+      <div class="export-option">
+        <span class="option-label">Format:</span>
+        <label><input type="radio" name="format" value="markdown" checked disabled> Markdown</label>
+        <label><input type="radio" name="format" value="pdf" disabled> PDF</label>
+      </div>
+
+      <div class="export-option">
+        <span class="option-label">Output:</span>
+        <label><input type="radio" name="output" value="single" checked disabled> Single file</label>
+        <label><input type="radio" name="output" value="separate" disabled> Separate files <small>(as .zip)</small></label>
+      </div>
+
+      <div class="export-buttons">
+        <button class="export-btn" id="export-btn" disabled>Export</button>
+        <button class="clear-btn" id="clear-btn" disabled>Clear All</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="toast-container" id="toast-container"></div>
+  <div class="modal-backdrop" id="preview-modal" hidden></div>
+
+  <script src="../lib/turndown.js"></script>
+  <script src="../lib/jspdf.umd.min.js"></script>
+  <script src="../lib/jszip.min.js"></script>
+  <script src="../export/markdown.js"></script>
+  <script src="../export/pdf.js"></script>
+  <script src="sidepanel.js"></script>
+</body>
+</html>

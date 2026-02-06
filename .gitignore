@@ -1,0 +1,5 @@
+# project-specific
+.claude
+docs/specs/*.md
+*.jpeg
+*.tmp
