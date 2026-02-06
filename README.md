@@ -96,9 +96,6 @@ Many documentation sites render content in ways that make it hard to copy, scrap
 │   ├── icon-48.png
 │   └── icon-128.png
 │
-└── /docs
-    └── /specs
-        └── *.md            # Development specs
 ```
 
 ## Data Flow
