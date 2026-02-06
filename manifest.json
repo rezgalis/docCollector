@@ -1,10 +1,17 @@
 {
   "manifest_version": 3,
   "name": "docCollector",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Collect content from multiple pages, export as Markdown or PDF",
-  "permissions": ["sidePanel", "activeTab", "scripting", "storage"],
-  "host_permissions": ["<all_urls>"],
+  "permissions": [
+    "sidePanel",
+    "activeTab",
+    "scripting",
+    "storage"
+  ],
+  "host_permissions": [
+    "<all_urls>"
+  ],
   "side_panel": {
     "default_path": "src/sidepanel/sidepanel.html"
   },
